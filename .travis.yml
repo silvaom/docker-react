@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -f -t zefhon/docker-react Dockerfile.dev .
+  - docker build -t zefhon/docker-react -f Dockerfile.dev .
 
 script:
   - docker build zefhon/docker-react npm run test -- --coverage
